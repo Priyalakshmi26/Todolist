@@ -1,66 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
 *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
- /* background-image: linear-gradient(to right, #E22865, #37ADCD);*/
-  color: #fff;
+    color: white;
+    font-family: "Times New Roman";
+    min-height: 100vh;
 }
 
-.dark {
-  background-color: #1a1d24; 
-  color: #efefef;
+header{
+    font-size: 1.5rem;
 }
 
-.container{
-  width: 440px;
-  margin: auto;
+header,form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.header{
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  flex-wrap: wrap;
-  min-height: 70px;
-  padding: 0 20px;
-}
+form input{
 
-.div-1{
-  background-color:midnightblue;
-  padding:50px;
-  text-align: center;
-  border-radius: 25px;
-}
-
-.div-2{
-  background-color:midnightblue;
-  padding: 10px;
-  text-align: center;
-  border-radius: 25px;
-  
-}
-
-#header h2{font-size: 2rem;}
-
-#user_input{
-  margin-top: 10px;
-  outline:none;
-  margin-top: 15px;
-  width: 320px;
-  height: 100px;
-  text-align: center;
-  justify-content: center;
- 
-}
-
-.user_input input{
-  width: 80%;
+  width: 70%;
   outline: none;
   padding: 8px;
   border: 1px solid lightgray;
@@ -76,12 +39,8 @@ body{
   transition: all 0.30s ease-in-out;
 }
 
-.user_input input:focus{
-  box-shadow: 0 0 5px #E22865;
-  border: 1px solid #E22865;
-}
+form button{
 
-.user_input button{
   cursor: pointer;
   padding: 8px;
   color: black;
@@ -96,39 +55,83 @@ body{
 }
 
 
-#to_do_list{
-  width: 500px;
-  margin: auto;
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
-.item{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: auto;
-  border-radius: 2px;
-  padding: 1rem;
-  color: #454545;
-  margin-top:10px;
-  font-size: 1rem;
-  background-color: white;
-  border: 1px solid lightgray;
-  -webkit-transition: all 0.30s ease-in-out;
-  -moz-transition: all 0.30s ease-in-out;
-  -ms-transition: all 0.30s ease-in-out;
-  -o-transition: all 0.30s ease-in-out;
-  transition: all 0.30s ease-in-out;
+.todo-list{
+    list-style: none;
+    min-width: 30%;
+	
+
 }
 
-.item:hover{
+.todo{
+   background-color: white;
+    color: black;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    align-items: center;
+    transition: all 0.5s ease;
+    max-width: inherit;
+	border: 1px solid lightgray;
+	width:300px;
+}
+
+.todo:hover{
   box-shadow: 0 0 20px #E22865;
   border: 1px solid #E22865;
 }
-
-.item i{
-  cursor: pointer;
-  margin: 0 5px;
+.div-1{
+  background-color:midnightblue;
+  padding:50px;
+  text-align: center;
+  border-radius: 25px;
+  max-width:400px;
 }
+
+.div-2{
+  background-color:midnightblue;
+  padding: 10px;
+  text-align: center;
+  border-radius: 25px;
+  max-width:400px;
+}
+
+
+
+.todo li{
+	width:80%;
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.trash-btn{
+    padding: 1rem;
+    background-color: white;
+    color: red;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+.fa-trash{
+    pointer-events: none;  /* now the font-awesome icon will not respond to the mouse movements like click, hover or any of it */
+}
+
+
+.dark {
+  background-color: black; 
+  color: #efefef;
+}
+
 
 @media(max-width:1280px){
   .container{width: 100%;}
@@ -146,15 +149,15 @@ body{
 
   #header h2{margin: 10px 0;}
 
-  .user_input{width: 100%;}
+  .from_input{width: 100%;}
 
   #to_do_list{width: 100%;}
 }
 
 @media(max-width:480px){
-  .user_input input{width: 74%;}
+  .form_input input{width: 74%;}
 }
 
 @media(max-width:320px){
-  .user_input input{width: 60%;}
+  .form_input input{width: 60%;}
 }
